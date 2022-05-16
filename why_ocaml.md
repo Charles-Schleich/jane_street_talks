@@ -43,7 +43,7 @@ let find_mismatches map1 map2 =
   )
 ```
 
-``` rust ocaml
+```ocaml
 type 'a expr = | True
                | False
                | And of 'a expr * 'a expr
