@@ -1,0 +1,66 @@
+
+H.264 - Video codec, Succeeded by H.265 
+
+With dedicated hardware you can get much better performance and feature support than with with the   equivalent software emulation, i.e. running software to do the same thing on an x86 architecture  
+
+Often difficult to do something like Deep Packet inspection at the scale and speed you need on a CPU,   Hence hardware  
+
+In hardware you have much better latency variance when compared to software abstractions.  
+i.e. 20ns across the entire range   
+Software is good up until the 99th percentile, then it goes into the microseconds  
+
+Variance in self designed hardware is much more manageble when compared to   
+Operating systems variance (switching processes, overheads, Memory access)  
+- OS / Software : Non-deterministic performance  + Difficult to reason about the timing  
+- Hardware      : A small amount of non-determinism in Hardware design, that is usually manageble   
+
+What happens in Hardware:  
+    - Massively threaded (parallel?) system    
+    - Read old values, compute new values and step   
+    - simplification (multiple clock domains, ...)  
+  
+FPGA - Field Programmable Gate Arrays   
+    - Contains a Matrix of LUTS  
+    - LUT - Look Up Table  
+    - Laid out in a Grid pattern  
+    - LUT's are Boolean operators / Functions  
+    - Programable Routing, connections between the LUTs   
+    - High performance but changable, ability to re-program the FPGA   
+  
+ASIC - Application Specific Integrated circuit  
+    - ASICS are superior to FPGA's in the following metrics:   
+      - Power Consumption (3x-10x Less than FPGA)  
+      - Area used / Physical Space much less   
+      - Frequencies that you can run your board at will be much higher  
+    - Drawbacks   
+      - However, need to use economies of scale to be viable   
+        - Need 40 million units to start making sense   
+      - Unchangable, with FPGAs you can iterate  
+  
+FPGA's Cost a lot more per unit, but make sense when using them for testing and iterating on design.   
+  
+Hardware Design Languages available  
+    - Verilog  
+    - VHDL - Dominantly used in the industry  
+
+So what is HardCaml ?  
+    - OCaml Library   
+    - Embeded domain specific Language  
+    - Lib that exposes a bunch of functions to design hardware  
+      - hardware adders  
+      - 10 input multiplexer   
+      - 32 bit register  
+    - Build up a hardware graph  
+    - HardCaml contains a simulator   
+    - WaveForm viewer  
+    - Numerous integrations into the software world   
+    - Allows for CI/CD, integration testing, the benefits of the   software development cycle, applied to hardware design
+
+Networks  
+    - Usually managed by a team of Network Engineer  
+    - Software defined networks   
+    - Moving towards using everything in terms of software  
+
+BlueSpec  
+
+-- Unfinished
