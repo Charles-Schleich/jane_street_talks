@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=v1CmGbOGb2I
+
 
 ### Languages
 imperative vs functional 
